@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Foodie - Food Delivery</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <h1>Foodie</h1>
+
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">Restaurants</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <h2>Discover the best food near you</h2>
+
+    <p>Order delicious food from your favorite restaurants.</p>
+
+<input type="text" id="searchBox" placeholder="Search for food or restaurants">
+
+<button onclick="searchFood()">Search</button>
+
+<button onclick="clearSearch()">Clear Search</button>
+
+    <h2>Food Categories</h2>
+
+<div class="categories">
+
+   <div class="category" onclick="searchCategory('Pizza')">
+    🍕
+    <p>Pizza</p>
+</div>
+
+<div class="category" onclick="searchCategory('Burger')">
+    🍔
+    <p>Burgers</p>
+</div>
+
+<div class="category" onclick="searchCategory('Indian')">
+    🍛
+    <p>Indian</p>
+</div>
+
+<div class="category" onclick="searchCategory('Chinese')">
+    🍜
+    <p>Chinese</p>
+</div>
+
+</div>
+<h2>Popular Restaurants</h2>
+<p id="noResults" style="display: none;">😔 No restaurants found</p>
+<div class="restaurant-container">
+
+
+    <div class="restaurant-card">
+        <div class="restaurant-image">🍛</div>
+        <h3>Spice Kitchen</h3>
+<p>Indian Food</p>
+<p>⭐ 4.5</p>
+<p>🟢 Open now</p>
+<button onclick="orderFood('Spice Kitchen')">Order Now</button>
+<div class="menu-items">
+
+    <p>🍛 Chicken Biryani - ₹180</p>
+<button onclick="addToCart('Chicken Biryani', 180)">Add to Cart</button>
+    <p>🍗 Chicken 65 - ₹150</p>
+<button onclick="addToCart('Chicken 65', 150)">Add to Cart</button>
+
+<p>🥘 Paneer Butter Masala - ₹160</p>
+<button onclick="addToCart('Paneer Butter Masala', 160)">Add to Cart</button>
+
+</div>
+    </div>
+
+    <div class="restaurant-card">
+        <div class="restaurant-image">🍕</div>
+        <h3>Pizza House</h3>
+<p>Italian Food</p>
+<p>⭐ 4.3</p>
+<p>🟢 Open now</p>
+<button onclick="orderFood('Pizza House')">Order Now</button>
+<div class="menu-items">
+
+   <p>🍕 Margherita Pizza - ₹199</p>
+<button onclick="addToCart('Margherita Pizza', 199)">Add to Cart</button>
+
+<p>🍕 Cheese Pizza - ₹249</p>
+<button onclick="addToCart('Cheese Pizza', 249)">Add to Cart</button>
+
+<p>🍕 Farmhouse Pizza - ₹299</p>
+<button onclick="addToCart('Farmhouse Pizza', 299)">Add to Cart</button>
+
+</div>
+    </div>
+
+    <div class="restaurant-card">
+        <div class="restaurant-image">🍔</div>
+        <h3>Food Corner</h3>
+<p>Fast Food</p>
+<p>⭐ 4.2</p>
+<p>🟢 Open now</p>
+<button onclick="orderFood('Food Corner')">Order Now</button>
+<div class="menu-items">
+
+   <p>🍔 Chicken Burger - ₹149</p>
+<button onclick="addToCart('Chicken Burger', 149)">Add to Cart</button>
+
+<p>🍟 French Fries - ₹99</p>
+<button onclick="addToCart('French Fries', 99)">Add to Cart</button>
+
+<p>🥤 Cold Drink - ₹59</p>
+<button onclick="addToCart('Cold Drink', 59)">Add to Cart</button>
+
+</div>
+    </div>
+
+</div>
+<h2>🛒 Your Cart</h2>
+
+<div id="cart">
+    <p>Your cart is empty.</p>
+</div>
+
+<h3 id="cartTotal">Total: ₹0</h3>
+<button onclick="checkout()">Checkout</button>
+     <script src="script.js"></script>
+
+</body>
+
+</html>
